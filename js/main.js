@@ -1,5 +1,5 @@
 /**
- * TS URBAN - GLOBAL SOLUTIONS
+ * TS URBAN ALLIED SERVICES & ENTERPRISES (PRIVATE) LIMITED
  * Main Interactive Controller
  * Features:
  * - Permanent Fixed Sticky Navbar (Scroll transitions & Active Navigation with IntersectionObserver)
