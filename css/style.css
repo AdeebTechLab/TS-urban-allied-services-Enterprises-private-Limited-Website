@@ -30,9 +30,9 @@
     --color-border-subtle: #E2E8F0;
     --color-border-gold: rgba(217, 166, 46, 0.35);
     
-    /* Typography */
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Typography System - Premium Corporate Combination */
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     
     /* Transitions & Easings */
     --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
@@ -61,6 +61,9 @@ html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -68,15 +71,26 @@ body {
     color: var(--color-muted-white);
     font-family: var(--font-body);
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 a {
     color: inherit;
     text-decoration: none;
     transition: color var(--transition-fast);
+    word-break: break-word;
 }
 
 button {
@@ -499,10 +513,10 @@ ul {
 
 .ts-navbar-title,
 .logo-title {
-    font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+    font-family: var(--font-heading);
     font-size: 1.15rem;
     font-weight: 800;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     color: var(--color-white, #FFFFFF);
     line-height: 1.1;
     transition: color 0.3s ease;
@@ -510,10 +524,10 @@ ul {
 
 .ts-navbar-subtitle,
 .logo-subtitle {
-    font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
-    font-size: 0.54rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
+    font-family: var(--font-body);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     color: var(--color-gold-light, #FCE1A2);
     line-height: 1.2;
     margin-top: 2px;
@@ -587,11 +601,11 @@ ul {
 
 .ts-navbar-link,
 .nav-link {
-    font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+    font-family: var(--font-body);
     font-size: 0.88rem;
-    font-weight: 500;
+    font-weight: 600;
     color: rgba(255, 255, 255, 0.78);
-    letter-spacing: 0.015em;
+    letter-spacing: 0.01em;
     padding: 0.5rem 1.15rem;
     display: inline-flex;
     align-items: center;
@@ -640,7 +654,7 @@ ul {
 .ts-navbar-link-active,
 .nav-link.active {
     color: var(--color-gold-light, #FCE1A2);
-    font-weight: 600;
+    font-weight: 700;
     text-shadow: 0 0 12px rgba(217, 164, 65, 0.45);
 }
 
@@ -933,9 +947,10 @@ ul {
 }
 
 .hero-eyebrow-text {
-    font-size: clamp(0.72rem, 0.85vw, 0.80rem);
+    font-family: var(--font-body);
+    font-size: clamp(0.72rem, 0.85vw, 0.78rem);
     font-weight: 700;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.14em;
     color: var(--color-gold-light);
     text-transform: uppercase;
 }
@@ -958,11 +973,11 @@ ul {
 /* 2. Staggered Entrance: Main Heading & Gold Reveal */
 .hero-heading {
     font-family: var(--font-heading);
-    font-size: clamp(2.2rem, 4.2vw, 3.9rem);
-    line-height: 1.10;
-    font-weight: 700;
+    font-size: clamp(2.3rem, 4.4vw, 3.85rem);
+    line-height: 1.08;
+    font-weight: 800;
     margin-bottom: clamp(0.65rem, 1.6vh, 1.25rem);
-    letter-spacing: -0.015em;
+    letter-spacing: -0.035em;
     opacity: 0;
     transform: translateY(22px);
     animation: heroElementEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s forwards;
@@ -972,11 +987,13 @@ ul {
 .heading-line-white {
     display: block;
     color: var(--color-white);
+    letter-spacing: -0.035em;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .heading-line-gold {
     display: block;
+    letter-spacing: -0.035em;
     background: linear-gradient(135deg, #FFFFFF 0%, var(--color-gold-light) 40%, var(--color-gold) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
@@ -1000,8 +1017,10 @@ ul {
 
 /* 3. Staggered Entrance: Description */
 .hero-description {
-    font-size: clamp(0.86rem, 1.05vw, 1.02rem);
-    line-height: 1.6;
+    font-family: var(--font-body);
+    font-size: clamp(0.92rem, 1.05vw, 1.02rem);
+    line-height: 1.7;
+    letter-spacing: 0.005em;
     color: var(--color-muted-white);
     max-width: 520px;
     margin-bottom: clamp(0.95rem, 2.2vh, 1.75rem);
@@ -1038,6 +1057,7 @@ ul {
     gap: 0.6rem;
     background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
     color: var(--color-primary-navy);
+    font-family: var(--font-body);
     font-size: clamp(0.86rem, 0.95vw, 0.95rem);
     font-weight: 700;
     padding: clamp(0.68rem, 1.3vh, 0.85rem) clamp(1.4rem, 2vw, 1.85rem);
@@ -1076,8 +1096,9 @@ ul {
     -webkit-backdrop-filter: blur(10px);
     border: 1.5px solid var(--color-gold, #D9A441);
     color: var(--color-white, #FFFFFF);
+    font-family: var(--font-body);
     font-size: clamp(0.86rem, 0.95vw, 0.95rem);
-    font-weight: 600;
+    font-weight: 650;
     padding: clamp(0.65rem, 1.25vh, 0.82rem) clamp(1.3rem, 1.8vw, 1.7rem);
     border-radius: 9999px;
     text-decoration: none;
@@ -1184,10 +1205,10 @@ ul {
 }
 
 .ts-hero-marquee-item {
-    font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
-    font-size: clamp(0.76rem, 0.88vw, 0.86rem);
+    font-family: var(--font-body);
+    font-size: clamp(0.74rem, 0.85vw, 0.82rem);
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     color: rgba(255, 255, 255, 0.82);
     text-transform: uppercase;
     padding: 0.35rem 0.6rem;
@@ -1203,14 +1224,15 @@ ul {
 }
 
 .ts-hero-marquee-badge {
+    font-family: var(--font-body);
     color: var(--color-gold-light, #FCE1A2);
     background: rgba(217, 164, 65, 0.12);
     border: 1px solid rgba(217, 164, 65, 0.35);
     border-radius: 9999px;
     padding: 0.26rem 0.85rem;
     margin: 0 0.4rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     box-shadow: 0 0 12px rgba(217, 164, 65, 0.15);
 }
 
@@ -1341,10 +1363,11 @@ ul {
 }
 
 .about-eyebrow-text {
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 0.22em;
-    color: var(--color-gold);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--color-gold-dark);
     text-transform: uppercase;
 }
 
@@ -1357,20 +1380,22 @@ ul {
 
 .about-heading {
     font-family: var(--font-heading);
-    font-size: clamp(2.2rem, 3.4vw, 3.1rem);
+    font-size: clamp(2.1rem, 3.3vw, 2.9rem);
     color: var(--color-deep-navy);
     font-weight: 700;
-    letter-spacing: -0.015em;
-    line-height: 1.12;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
     margin-bottom: clamp(0.6rem, 1.4vh, 1.1rem);
 }
 
 .about-lead-paragraph {
     max-width: 520px;
-    font-size: clamp(0.92rem, 1.05vw, 1.04rem);
-    line-height: 1.68;
+    font-family: var(--font-body);
+    font-size: clamp(0.92rem, 1.05vw, 1.02rem);
+    line-height: 1.7;
+    letter-spacing: 0.005em;
     color: #2D3748;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: clamp(0.9rem, 1.8vh, 1.35rem);
 }
 
@@ -1418,25 +1443,29 @@ ul {
 }
 
 .highlight-title {
+    font-family: var(--font-body);
     font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     color: var(--color-gold-dark);
     margin-bottom: 0.15rem;
     text-transform: uppercase;
 }
 
 .highlight-text {
-    font-size: 0.78rem;
-    line-height: 1.4;
+    font-family: var(--font-body);
+    font-size: 0.80rem;
+    line-height: 1.55;
+    letter-spacing: 0.005em;
     color: #4A5568;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .values-list-inline {
-    font-size: 0.76rem;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
     color: #2D3748;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .highlight-divider {
@@ -1478,18 +1507,21 @@ ul {
 }
 
 .j-tag-text {
-    font-size: 0.70rem;
-    font-weight: 800;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
     letter-spacing: 0.14em;
     color: var(--color-gold-dark);
     text-transform: uppercase;
 }
 
 .janitorial-preview-text {
-    font-size: 0.78rem;
-    line-height: 1.45;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
     color: #4A5568;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .about-explore-link {
@@ -1498,11 +1530,12 @@ ul {
     gap: 0.45rem;
     background: var(--color-deep-navy);
     color: #FFFFFF;
-    font-size: 0.78rem;
+    font-family: var(--font-body);
+    font-size: 0.80rem;
     font-weight: 700;
     padding: 0.55rem 1.1rem;
     border-radius: 9999px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     flex-shrink: 0;
     transition: all var(--transition-normal);
 }
@@ -1533,15 +1566,17 @@ ul {
 .meta-item { display: flex; align-items: baseline; gap: 0.45rem; }
 
 .meta-val {
-    font-size: 0.82rem;
+    font-family: var(--font-heading);
+    font-size: 0.84rem;
     font-weight: 800;
     color: var(--color-gold-dark);
-    letter-spacing: 0.04em;
+    letter-spacing: -0.02em;
 }
 
 .meta-label {
-    font-size: 0.74rem;
-    font-weight: 600;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
     color: #718096;
 }
 
@@ -1669,6 +1704,7 @@ ul {
     border-radius: 6px;
     background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
     color: var(--color-primary-navy);
+    font-family: var(--font-heading);
     font-size: 0.72rem;
     font-weight: 800;
     display: flex;
@@ -1680,17 +1716,19 @@ ul {
 .tag-text-block { display: flex; flex-direction: column; }
 
 .tag-title {
-    font-size: 0.76rem;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
     font-weight: 800;
     color: #FFFFFF;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
 }
 
 .tag-subtitle {
-    font-size: 0.54rem;
-    font-weight: 700;
+    font-family: var(--font-body);
+    font-size: 0.55rem;
+    font-weight: 600;
     color: var(--color-gold-light);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
 }
 
 /* ==========================================================================
@@ -1759,9 +1797,10 @@ ul {
 }
 
 .services-eyebrow-text {
+    font-family: var(--font-body);
     font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.22em;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     color: var(--color-gold-dark);
     text-transform: uppercase;
 }
@@ -1776,18 +1815,20 @@ ul {
 
 .services-main-heading {
     font-family: var(--font-heading);
-    font-size: clamp(2.1rem, 3.4vw, 3.1rem);
+    font-size: clamp(2.1rem, 3.3vw, 2.9rem);
     line-height: 1.15;
     font-weight: 700;
     color: var(--color-primary-navy);
     margin-bottom: 0.75rem;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.025em;
 }
 
 .services-sub-description {
-    font-size: clamp(0.88rem, 1.05vw, 0.98rem);
+    font-family: var(--font-body);
+    font-size: clamp(0.90rem, 1.05vw, 0.98rem);
     color: var(--color-text-muted);
-    line-height: 1.6;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
     max-width: 650px;
     margin: 0 auto;
     font-weight: 400;
@@ -1852,10 +1893,11 @@ ul {
 }
 
 .service-card-num {
-    font-size: 0.78rem;
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
     font-weight: 800;
     color: #94A3B8;
-    letter-spacing: 0.06em;
+    letter-spacing: -0.04em;
     font-feature-settings: 'tnum';
 }
 
@@ -1865,13 +1907,17 @@ ul {
     font-weight: 700;
     color: var(--color-primary-navy);
     line-height: 1.25;
+    letter-spacing: -0.02em;
     margin-bottom: 0.45rem;
 }
 
 .service-card-desc {
-    font-size: 0.83rem;
+    font-family: var(--font-body);
+    font-size: 0.84rem;
     color: #526071;
-    line-height: 1.5;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
+    font-weight: 400;
     margin-bottom: 1.1rem;
     flex-grow: 1;
 }
@@ -1880,8 +1926,10 @@ ul {
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
+    font-family: var(--font-body);
     font-size: 0.84rem;
     font-weight: 700;
+    letter-spacing: 0.01em;
     color: var(--color-primary-navy);
     background: transparent;
     padding: 0.25rem 0;
@@ -2003,7 +2051,7 @@ ul {
 
 /* Subtle Watermark Service Number */
 .modal-num-watermark {
-    font-family: var(--font-heading), Georgia, serif;
+    font-family: var(--font-heading);
     font-size: clamp(80px, 9vw, 110px);
     font-weight: 800;
     color: rgba(255, 255, 255, 0.05);
@@ -2014,6 +2062,7 @@ ul {
     transform: translateY(-50%);
     pointer-events: none;
     user-select: none;
+    letter-spacing: -0.04em;
     z-index: 1;
 }
 
@@ -2026,9 +2075,10 @@ ul {
 }
 
 .modal-service-badge {
-    font-size: 0.76rem;
-    font-weight: 800;
-    letter-spacing: 0.22em;
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     color: #D9A62E;
     text-transform: uppercase;
 }
@@ -2077,15 +2127,16 @@ ul {
 
 .modal-service-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.4rem, 2.4vw, 1.95rem);
+    font-size: clamp(1.35rem, 2.3vw, 1.85rem);
     font-weight: 700;
     color: #FFFFFF;
     line-height: 1.18;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.025em;
 }
 
 .modal-service-tagline {
-    font-size: 0.80rem;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 0.12em;
     color: #FCE1A2;
@@ -2173,9 +2224,10 @@ ul {
 }
 
 .modal-section-label {
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.18em;
+    font-family: var(--font-body);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     color: #D9A62E;
     text-transform: uppercase;
     margin-bottom: 0.45rem;
@@ -2183,16 +2235,19 @@ ul {
 }
 
 .modal-overview-text {
-    font-size: 17px;
-    line-height: 1.7;
+    font-family: var(--font-body);
+    font-size: 0.94rem;
+    line-height: 1.72;
+    letter-spacing: 0.005em;
     color: #4B5563;
     font-weight: 400;
 }
 
 .modal-secondary-tagline {
+    font-family: var(--font-body);
     color: #A5731F;
-    font-size: 0.88rem;
-    font-weight: 700;
+    font-size: 0.86rem;
+    font-weight: 600;
     margin-top: 0.5rem;
     letter-spacing: 0.04em;
 }
@@ -2203,8 +2258,9 @@ ul {
 }
 
 .modal-heading-sub {
-    font-size: 0.82rem;
-    font-weight: 800;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 700;
     letter-spacing: 0.14em;
     color: #020B18;
     text-transform: uppercase;
@@ -2263,10 +2319,11 @@ ul {
 }
 
 .modal-offer-title {
-    font-size: 0.90rem;
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
     font-weight: 700;
     color: #020B18;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.015em;
     transition: color 0.3s ease;
 }
 
@@ -2275,9 +2332,12 @@ ul {
 }
 
 .modal-offer-desc {
-    font-size: 0.83rem;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
     color: #6B7280;
-    line-height: 1.5;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
+    font-weight: 400;
     padding-left: 1.4rem;
 }
 
@@ -2324,15 +2384,20 @@ ul {
 }
 
 .modal-strength-title {
-    font-size: 0.86rem;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
     font-weight: 700;
     color: #020B18;
+    letter-spacing: -0.01em;
 }
 
 .modal-strength-desc {
+    font-family: var(--font-body);
     font-size: 0.80rem;
     color: #6B7280;
-    line-height: 1.45;
+    line-height: 1.55;
+    letter-spacing: 0.005em;
+    font-weight: 400;
 }
 
 /* Category Tags (For TS Trading) */
@@ -2346,9 +2411,10 @@ ul {
     background: rgba(7, 21, 37, 0.05);
     border: 1px solid rgba(7, 21, 37, 0.12);
     color: #020B18;
+    font-family: var(--font-body);
     font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     padding: 0.45rem 0.9rem;
     border-radius: 8px;
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -2378,18 +2444,22 @@ ul {
 }
 
 .modal-notice-text h4 {
-    font-size: 0.92rem;
+    font-family: var(--font-heading);
+    font-size: 0.90rem;
     font-weight: 700;
     color: #92400E;
     margin-bottom: 0.35rem;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: -0.01em;
 }
 
 .modal-notice-text p {
-    font-size: 0.88rem;
+    font-family: var(--font-body);
+    font-size: 0.86rem;
     color: #B45309;
-    line-height: 1.55;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
+    font-weight: 400;
 }
 
 /* Modal Bottom Action / Quote Box */
@@ -2406,6 +2476,7 @@ ul {
 
 .modal-inquire-text {
     color: #FFFFFF;
+    font-family: var(--font-body);
     font-size: 0.88rem;
     font-weight: 600;
 }
@@ -2416,11 +2487,13 @@ ul {
     gap: 0.5rem;
     background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
     color: #020B18;
+    font-family: var(--font-body);
     font-size: 0.82rem;
     font-weight: 700;
     padding: 0.55rem 1.25rem;
     border-radius: 9999px;
     cursor: pointer;
+    letter-spacing: 0.01em;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -2447,15 +2520,17 @@ ul {
 }
 
 .footer-brand-title {
+    font-family: var(--font-heading);
     font-size: 0.84rem;
     font-weight: 800;
     color: #FFFFFF;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
 }
 
 .footer-brand-sub {
+    font-family: var(--font-body);
     font-size: 0.58rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #D9A62E;
     letter-spacing: 0.16em;
 }
@@ -2466,8 +2541,10 @@ ul {
     gap: 0.5rem;
     background: transparent;
     color: #FFFFFF;
-    font-size: 0.86rem;
+    font-family: var(--font-body);
+    font-size: 0.84rem;
     font-weight: 700;
+    letter-spacing: 0.01em;
     border: none;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -2610,9 +2687,10 @@ ul {
 }
 
 .ts-ls-eyebrow-text {
+    font-family: var(--font-body);
     font-size: 0.76rem;
-    font-weight: 800;
-    letter-spacing: 0.28em;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     color: var(--color-gold-light);
     text-transform: uppercase;
 }
@@ -2637,12 +2715,12 @@ ul {
 
 .ts-ls-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-size: clamp(2.1rem, 3.8vw, 3.3rem);
     line-height: 1.15;
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 1.1rem;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.025em;
 }
 
 .ts-ls-highlight {
@@ -2675,9 +2753,11 @@ ul {
 }
 
 .ts-ls-subtitle {
-    font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+    font-family: var(--font-body);
+    font-size: clamp(0.95rem, 1.15vw, 1.06rem);
     color: var(--color-muted-white);
-    line-height: 1.65;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
     font-style: italic;
     opacity: 0.95;
     font-weight: 400;
@@ -2866,7 +2946,7 @@ ul {
     font-size: 1.05rem;
     font-weight: 800;
     color: #FFFFFF;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.06em;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 12px rgba(217, 166, 46, 0.3);
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
@@ -2903,8 +2983,9 @@ ul {
 }
 
 .ts-ls-pill-label {
+    font-family: var(--font-body);
     font-size: 0.68rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--color-gold-light);
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -2919,9 +3000,10 @@ ul {
 }
 
 .ts-ls-meta-tag {
+    font-family: var(--font-body);
     font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.22em;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     color: rgba(217, 166, 46, 0.85);
     text-transform: uppercase;
     margin-bottom: 0.35rem;
@@ -2934,7 +3016,7 @@ ul {
     color: #FFFFFF;
     line-height: 1.25;
     margin-bottom: 0.4rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s ease;
 }
 
@@ -2947,10 +3029,11 @@ ul {
 }
 
 .ts-ls-role-title {
-    font-size: 0.85rem;
+    font-family: var(--font-body);
+    font-size: 0.84rem;
     font-weight: 700;
     color: var(--color-gold-light);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
 }
 
 .ts-ls-role-sep {
@@ -2959,10 +3042,11 @@ ul {
 }
 
 .ts-ls-org-title {
+    font-family: var(--font-body);
     font-size: 0.78rem;
     font-weight: 600;
     color: rgba(215, 220, 226, 0.75);
-    letter-spacing: 0.12em;
+    letter-spacing: 0.10em;
 }
 
 .ts-ls-gold-divider {
@@ -3148,8 +3232,9 @@ ul {
 }
 
 .ts-nexus-val {
+    font-family: var(--font-body);
     font-size: 0.65rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--color-gold-light);
     letter-spacing: 0.16em;
 }
@@ -3469,9 +3554,10 @@ ul {
 }
 
 .ts-contact-eyebrow-text {
+    font-family: var(--font-body);
     font-size: 0.76rem;
-    font-weight: 800;
-    letter-spacing: 0.28em;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     color: #C9A227;
     text-transform: uppercase;
 }
@@ -3495,12 +3581,12 @@ ul {
 
 .ts-contact-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.1rem, 3.6vw, 3.2rem);
-    line-height: 1.18;
+    font-size: clamp(2.0rem, 3.4vw, 3.0rem);
+    line-height: 1.15;
     font-weight: 700;
     color: #0F172A;
     margin-bottom: 0.9rem;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.025em;
 }
 
 .ts-contact-highlight {
@@ -3511,9 +3597,11 @@ ul {
 }
 
 .ts-contact-subtitle {
+    font-family: var(--font-body);
     font-size: clamp(0.92rem, 1.05vw, 1.02rem);
     color: #64748B;
-    line-height: 1.65;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
     max-width: 640px;
     margin: 0 auto 1.1rem;
     font-weight: 400;
@@ -3576,28 +3664,32 @@ ul {
 }
 
 .ts-contact-sub-eyebrow {
+    font-family: var(--font-body);
     font-size: 0.70rem;
-    font-weight: 800;
-    letter-spacing: 0.22em;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     color: #C9A227;
     text-transform: uppercase;
 }
 
 .ts-contact-hub-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.4rem, 1.9vw, 1.75rem);
+    font-size: clamp(1.35rem, 1.8vw, 1.7rem);
     font-weight: 700;
     color: #0F172A;
     line-height: 1.25;
     margin-bottom: 0.4rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .ts-contact-hub-desc {
+    font-family: var(--font-body);
     font-size: 0.92rem;
     color: #64748B;
-    line-height: 1.55;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
     font-style: italic;
+    font-weight: 400;
 }
 
 /* Vertical Connected Tree Layout */
@@ -3700,10 +3792,11 @@ ul {
 }
 
 .ts-contact-item-label {
+    font-family: var(--font-body);
     font-size: 0.70rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #C9A227;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 0.25rem;
 }
@@ -3718,8 +3811,10 @@ ul {
 }
 
 .ts-contact-link {
+    font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 600;
+    letter-spacing: 0.01em;
     color: #111827;
     text-decoration: none;
     transition: color 0.25s ease, transform 0.25s ease;
@@ -3741,6 +3836,7 @@ ul {
 }
 
 .ts-contact-web-label {
+    font-family: var(--font-body);
     color: #64748B;
     font-size: 0.80rem;
 }
@@ -3750,6 +3846,7 @@ ul {
     align-items: center;
     gap: 0.35rem;
     color: #C9A227;
+    font-family: var(--font-body);
     font-size: 0.88rem;
     font-weight: 600;
 }
@@ -3763,13 +3860,17 @@ ul {
 }
 
 .ts-contact-address {
+    font-family: var(--font-body);
     font-size: 0.88rem;
     color: #334155;
-    line-height: 1.5;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
+    font-weight: 500;
     margin-bottom: 0.2rem;
 }
 
 .ts-contact-item-sub {
+    font-family: var(--font-body);
     font-size: 0.72rem;
     font-weight: 500;
     color: #94A3B8;
@@ -3810,9 +3911,10 @@ ul {
 
 .ts-contact-form-badge {
     display: inline-block;
+    font-family: var(--font-body);
     font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.20em;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     color: #C9A227;
     background: #FEF9C3;
     padding: 0.2rem 0.6rem;
@@ -3823,18 +3925,21 @@ ul {
 
 .ts-contact-form-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.35rem, 1.8vw, 1.7rem);
+    font-size: clamp(1.3rem, 1.7vw, 1.65rem);
     font-weight: 700;
     color: #0F172A;
     line-height: 1.25;
     margin-bottom: 0.35rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .ts-contact-form-desc {
+    font-family: var(--font-body);
     font-size: 0.88rem;
     color: #64748B;
-    line-height: 1.5;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
+    font-weight: 400;
 }
 
 /* Alert Notification */
@@ -3864,8 +3969,10 @@ ul {
 }
 
 .ts-contact-alert-text {
+    font-family: var(--font-body);
     font-size: 0.88rem;
     color: #15803D;
+    font-weight: 500;
 }
 
 /* Form Controls */
@@ -3888,10 +3995,11 @@ ul {
 }
 
 .ts-contact-label {
+    font-family: var(--font-body);
     font-size: 0.74rem;
-    font-weight: 700;
+    font-weight: 650;
     color: #334155;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
@@ -3909,6 +4017,8 @@ ul {
     padding: 0.75rem 0.95rem;
     font-family: var(--font-body);
     font-size: 0.90rem;
+    font-weight: 450;
+    letter-spacing: 0.005em;
     color: #111827;
     outline: none;
     transition: all 0.25s ease;
@@ -3919,6 +4029,7 @@ ul {
 .ts-contact-textarea::placeholder {
     color: #94A3B8;
     font-size: 0.86rem;
+    font-family: var(--font-body);
 }
 
 .ts-contact-input:focus,
@@ -3939,12 +4050,14 @@ ul {
     cursor: pointer;
     padding-right: 2.2rem;
     color: #111827;
+    font-family: var(--font-body);
 }
 
 .ts-contact-select option {
     background-color: #FFFFFF;
     color: #111827;
     padding: 0.5rem;
+    font-family: var(--font-body);
 }
 
 .ts-contact-select-arrow {
@@ -3961,6 +4074,7 @@ ul {
 .ts-contact-textarea {
     resize: vertical;
     min-height: 95px;
+    font-family: var(--font-body);
 }
 
 /* Submit Button */
@@ -3972,9 +4086,9 @@ ul {
     background: linear-gradient(135deg, #E89B18 0%, #C9A227 100%);
     color: #0F172A;
     font-family: var(--font-body);
-    font-size: 0.86rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 0.90rem 1.6rem;
     border-radius: 12px;
@@ -4050,9 +4164,10 @@ ul {
 }
 
 .ts-contact-feature-tag {
+    font-family: var(--font-body);
     font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 0.20em;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     color: #C9A227;
     text-transform: uppercase;
     display: block;
@@ -4065,9 +4180,11 @@ ul {
     font-weight: 700;
     color: #0F172A;
     line-height: 1.2;
+    letter-spacing: -0.015em;
 }
 
 .ts-contact-intl-sub {
+    font-family: var(--font-body);
     font-size: 0.76rem;
     font-weight: 600;
     color: #C9A227;
@@ -4075,19 +4192,25 @@ ul {
 }
 
 .ts-contact-mission-text {
+    font-family: var(--font-body);
     font-size: 0.90rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
     color: #475569;
     font-style: italic;
     border-left: 2px solid #C9A227;
     padding-left: 0.9rem;
+    font-weight: 400;
 }
 
 .ts-contact-intl-desc {
+    font-family: var(--font-body);
     font-size: 0.86rem;
     color: #475569;
-    line-height: 1.5;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
     margin-bottom: 0.85rem;
+    font-weight: 400;
 }
 
 /* International Presence Connected Markers */
@@ -4144,16 +4267,19 @@ ul {
 }
 
 .ts-contact-presence-name {
+    font-family: var(--font-body);
     font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
+    font-weight: 700;
+    letter-spacing: 0.10em;
     color: #0F172A;
 }
 
 .ts-contact-intl-footer {
+    font-family: var(--font-body);
     font-size: 0.78rem;
     color: #64748B;
     font-weight: 500;
+    line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -4180,9 +4306,10 @@ ul {
 }
 
 .ts-contact-cta-eyebrow {
+    font-family: var(--font-body);
     font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.20em;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     color: #C9A227;
     text-transform: uppercase;
     margin-bottom: 0.2rem;
@@ -4190,16 +4317,21 @@ ul {
 
 .ts-contact-cta-heading {
     font-family: var(--font-heading);
-    font-size: clamp(1.25rem, 1.7vw, 1.55rem);
+    font-size: clamp(1.22rem, 1.6vw, 1.5rem);
     font-weight: 700;
     color: #0F172A;
     line-height: 1.2;
+    letter-spacing: -0.02em;
     margin-bottom: 0.2rem;
 }
 
 .ts-contact-cta-text {
+    font-family: var(--font-body);
     font-size: 0.88rem;
+    line-height: 1.55;
+    letter-spacing: 0.005em;
     color: #64748B;
+    font-weight: 400;
 }
 
 .ts-contact-cta-btn {
@@ -4209,9 +4341,9 @@ ul {
     background: linear-gradient(135deg, #E89B18 0%, #C9A227 100%);
     color: #0F172A;
     font-family: var(--font-body);
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
+    font-size: 0.80rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 0.75rem 1.4rem;
     border-radius: 10px;
@@ -4256,9 +4388,10 @@ ul {
 }
 
 .ts-contact-footer-brand {
+    font-family: var(--font-body);
     font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.22em;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     color: #64748B;
     text-transform: uppercase;
 }
@@ -4469,20 +4602,29 @@ ul {
 
 .video-placeholder-card h3 {
     font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
     color: var(--color-white);
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
 }
 
 .video-placeholder-card p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
     color: var(--color-muted-white);
     font-size: 0.88rem;
 }
 
 .quote-eyebrow {
+    font-family: var(--font-body);
     font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
     color: var(--color-gold);
     display: block;
     margin-bottom: 0.3rem;
@@ -4491,12 +4633,19 @@ ul {
 .quote-header h2 {
     font-family: var(--font-heading);
     font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
     color: var(--color-white);
     margin-bottom: 0.4rem;
 }
 
 .quote-header p {
+    font-family: var(--font-body);
     font-size: 0.86rem;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
     color: var(--color-muted-white);
     margin-bottom: 1.5rem;
 }
@@ -4504,7 +4653,13 @@ ul {
 .quote-form { display: flex; flex-direction: column; gap: 1rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
-.form-group label { font-size: 0.78rem; font-weight: 600; color: var(--color-muted-white); }
+.form-group label {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    color: var(--color-muted-white);
+}
 
 .form-group input,
 .form-group select,
@@ -4516,6 +4671,8 @@ ul {
     color: var(--color-white);
     font-family: var(--font-body);
     font-size: 0.88rem;
+    font-weight: 450;
+    letter-spacing: 0.005em;
     outline: none;
     transition: border-color var(--transition-fast);
 }
@@ -4527,13 +4684,28 @@ ul {
     box-shadow: 0 0 8px rgba(217, 164, 65, 0.25);
 }
 
-.quote-submit-btn { width: 100%; justify-content: center; padding: 0.85rem; margin-top: 0.4rem; }
+.quote-submit-btn {
+    font-family: var(--font-body);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem;
+    margin-top: 0.4rem;
+}
 
 /* ==========================================================================
    7. RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
-/* Standard Laptops & 1366x768 / 1280x720 screens */
+/* ==========================================================================
+   7. COMPREHENSIVE RESPONSIVE MEDIA QUERIES (1920px down to 360px)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   A. Standard Laptops & Low Height Screens
+   -------------------------------------------------------------------------- */
 @media (max-height: 800px) and (min-width: 992px) {
     :root {
         --header-height: 64px;
@@ -4553,9 +4725,11 @@ ul {
     .image-inner-wrapper { height: 380px; }
 }
 
-/* Tablet Landscape (1024px - 1199px) */
+/* --------------------------------------------------------------------------
+   B. Tablet Landscape (1024px - 1199px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 1199px) {
-    .nav-list { gap: 1.2rem; }
+    .nav-list { gap: 1rem; }
     .hero-heading { font-size: 2.85rem; }
     .hero-content-grid { grid-template-columns: 1fr; }
     .hero-text-block { max-width: 540px; }
@@ -4569,7 +4743,9 @@ ul {
     .services-cards-grid { grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
 }
 
-/* Tablet Portrait (769px - 1023px) */
+/* --------------------------------------------------------------------------
+   C. Tablet Portrait (769px - 1023px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 1023px) {
     .desktop-nav, .ts-navbar-nav, .header-action { display: none !important; }
     .hamburger-btn, .ts-navbar-toggle { display: flex !important; }
@@ -4588,85 +4764,728 @@ ul {
     .image-inner-wrapper { height: 360px; }
 
     .services-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-    .service-modal-dialog { max-height: 90vh; }
+    .service-modal-dialog { max-height: 90vh; max-width: 620px; }
     .modal-grid-3col { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Mobile Devices (<= 768px) */
+/* --------------------------------------------------------------------------
+   D. Mobile Devices (<= 768px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+    :root {
+        --header-height: 66px;
+    }
+
+    /* Global Mobile Form Zoom Prevention */
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+
+    /* Navbar Mobile */
+    .header-container { padding: 0 1rem; }
+    .ts-navbar-mobile,
+    .mobile-drawer {
+        top: calc(var(--header-height, 66px) + 6px);
+        left: 10px;
+        right: 10px;
+        width: calc(100% - 20px);
+        max-width: 440px;
+        margin: 0 auto;
+        padding: 0.95rem;
+    }
+
+    /* Hero Section Mobile — Compact, Perfectly Composed Landing Screen */
     .hero-section {
-        height: auto;
+        height: 100svh;
         min-height: 100svh;
-        max-height: none;
-        overflow-y: visible;
+        max-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: var(--header-height, 66px);
+        background-color: var(--color-primary-navy);
+        overflow: hidden;
+        position: relative;
     }
     
-    .header-container { padding: 0 1.25rem; }
-    .hero-main-container { padding: 2rem 1.25rem 2.5rem; flex: none; }
-    .hero-heading { font-size: 2.25rem; }
-    .hero-description { font-size: 0.92rem; margin-bottom: 1.5rem; }
+    /* Prominently Visible Hero Background Image with Subtle Cinematic Movement */
+    .hero-bg-image {
+        background-image: url('assets/images/hero-bg.jpg');
+        background-size: cover;
+        background-position: 68% center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        transform: scale(1.00);
+        animation: mobileKenBurns 22s ease-in-out infinite alternate;
+        will-change: transform;
+    }
+
+    @keyframes mobileKenBurns {
+        0% { transform: scale(1.00) translate3d(0, 0, 0); }
+        50% { transform: scale(1.035) translate3d(-1%, -0.5%, 0); }
+        100% { transform: scale(1.00) translate3d(0, 0, 0); }
+    }
+
+    /* Intelligent Dual Overlay: Deep Contrast for Left Text + Clear Visibility for Right Ship */
+    .hero-bg-gradient-overlay {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            /* Vertical: Top header blend, bottom marquee blend */
+            linear-gradient(
+                180deg,
+                rgba(7, 21, 37, 0.88) 0%,
+                rgba(7, 21, 37, 0.45) 28%,
+                rgba(7, 21, 37, 0.55) 70%,
+                rgba(4, 12, 22, 0.95) 100%
+            ),
+            /* Horizontal: Strong dark background behind text on the left, translucent on the right */
+            linear-gradient(
+                90deg,
+                rgba(7, 21, 37, 0.94) 0%,
+                rgba(7, 21, 37, 0.86) 42%,
+                rgba(7, 21, 37, 0.48) 65%,
+                rgba(7, 21, 37, 0.12) 85%,
+                rgba(7, 21, 37, 0.04) 100%
+            );
+        opacity: 1;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .sun-glow-overlay {
+        opacity: 0.08;
+        right: 8%;
+        top: 18%;
+        width: 220px;
+        height: 220px;
+        filter: blur(35px);
+        pointer-events: none;
+    }
+
+    .atmospheric-overlay {
+        opacity: 0.65;
+        pointer-events: none;
+    }
+
+    /* Gold Ribbon Curve — Scaled, Offset to Right, with Slow Ambient Float & Glow */
+    .hero-curve-container {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(28%) scale(0.9);
+        opacity: 0.60;
+        pointer-events: none;
+        z-index: 2;
+        animation: mobileRibbonFloat 9s ease-in-out infinite alternate;
+        will-change: transform;
+    }
+
+    @keyframes mobileRibbonFloat {
+        0% { transform: translateX(28%) translateY(0px) scale(0.9); }
+        50% { transform: translateX(29%) translateY(-6px) scale(0.91); }
+        100% { transform: translateX(27%) translateY(4px) scale(0.89); }
+    }
+
+    .curve-gold-primary {
+        stroke-width: 4px;
+        animation: mobileGoldShimmer 6s ease-in-out infinite alternate;
+    }
+
+    .curve-gold-glow {
+        stroke-width: 9px;
+        opacity: 0.35;
+        animation: mobileGlowPulse 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes mobileGoldShimmer {
+        0% { opacity: 0.85; filter: drop-shadow(0 0 4px rgba(217, 164, 65, 0.4)); }
+        100% { opacity: 1; filter: drop-shadow(0 0 10px rgba(242, 189, 74, 0.7)); }
+    }
+
+    @keyframes mobileGlowPulse {
+        0% { opacity: 0.25; stroke-width: 8px; }
+        50% { opacity: 0.45; stroke-width: 11px; }
+        100% { opacity: 0.25; stroke-width: 8px; }
+    }
+
+    .curve-mask-path {
+        opacity: 0.35;
+    }
+
+    .curve-corner-accent,
+    .curve-corner-accent-2 {
+        display: none;
+    }
+
+    .hero-global-connection {
+        display: none;
+    }
+
+    .ambient-glow {
+        width: 240px;
+        height: 240px;
+        top: 20%;
+        left: 55%;
+        opacity: 0.4;
+    }
+
+    /* Ambient Floating Light Particles */
+    .hero-particles-layer {
+        display: block;
+    }
+    .hero-particle {
+        opacity: 0.55;
+    }
+    .particle-1 {
+        width: 3px;
+        height: 3px;
+        top: 32%;
+        right: 22%;
+        animation: mobileParticleFloat1 7s ease-in-out infinite alternate;
+    }
+    .particle-2 {
+        width: 2.5px;
+        height: 2.5px;
+        top: 55%;
+        right: 14%;
+        animation: mobileParticleFloat2 9s ease-in-out infinite alternate;
+    }
+    .particle-3 {
+        width: 3px;
+        height: 3px;
+        top: 20%;
+        right: 40%;
+        animation: mobileParticleFloat3 11s ease-in-out infinite alternate;
+    }
+
+    @keyframes mobileParticleFloat1 {
+        0% { transform: translate3d(0, 0, 0); opacity: 0.3; }
+        100% { transform: translate3d(-10px, -15px, 0); opacity: 0.7; }
+    }
+    @keyframes mobileParticleFloat2 {
+        0% { transform: translate3d(0, 0, 0); opacity: 0.25; }
+        100% { transform: translate3d(8px, -12px, 0); opacity: 0.65; }
+    }
+    @keyframes mobileParticleFloat3 {
+        0% { transform: translate3d(0, 0, 0); opacity: 0.2; }
+        100% { transform: translate3d(-6px, 10px, 0); opacity: 0.6; }
+    }
+
+    /* Hero Main Content Container — Vertically Centered Upper-Middle Balance */
+    .hero-main-container {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: clamp(0.5rem, 1.8vh, 1.1rem) clamp(1.15rem, 4.5vw, 1.6rem);
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        min-height: 0;
+        position: relative;
+        z-index: 10;
+    }
+
+    .hero-content-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 0;
+    }
+
+    .hero-text-block {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Staggered Content Entrance on Mobile */
+    .hero-eyebrow-wrapper {
+        margin-bottom: clamp(0.35rem, 1vh, 0.65rem);
+        gap: 0.5rem;
+        opacity: 0;
+        transform: translateY(14px);
+        animation: mobileElementEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+        will-change: transform, opacity;
+    }
+
+    .hero-eyebrow-text {
+        font-size: clamp(0.68rem, 2.4vw, 0.74rem);
+        letter-spacing: 0.14em;
+    }
+
+    .hero-eyebrow-line {
+        width: clamp(20px, 6vw, 32px);
+    }
+
+    .hero-heading {
+        font-size: clamp(2.0rem, 8.2vw, 2.65rem);
+        line-height: 1.1;
+        letter-spacing: -0.035em;
+        margin-bottom: clamp(0.45rem, 1.3vh, 0.75rem);
+        opacity: 0;
+        transform: translateY(18px);
+        animation: mobileElementEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.30s forwards;
+        will-change: transform, opacity;
+    }
+
+    .heading-line-white {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    .heading-line-gold {
+        font-size: inherit;
+        line-height: inherit;
+        animation: mobileGoldReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.40s both;
+    }
+
+    @keyframes mobileGoldReveal {
+        0% {
+            opacity: 0.4;
+            background-position: -80% center;
+            filter: drop-shadow(0 2px 6px rgba(217, 164, 65, 0.15));
+        }
+        100% {
+            opacity: 1;
+            background-position: 0% center;
+            filter: drop-shadow(0 3px 12px rgba(217, 164, 65, 0.35));
+        }
+    }
+
+    .hero-description {
+        font-size: clamp(0.85rem, 2.6vw, 0.92rem);
+        line-height: 1.58;
+        letter-spacing: 0.005em;
+        color: rgba(215, 220, 226, 0.90);
+        margin-bottom: clamp(0.85rem, 2.2vh, 1.35rem);
+        max-width: 100%;
+        opacity: 0;
+        transform: translateY(14px);
+        animation: mobileElementEntrance 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+        will-change: transform, opacity;
+    }
     
-    .hero-cta-group { flex-direction: column; align-items: stretch; width: 100%; gap: 0.85rem; }
-    .btn-primary, .btn-secondary { justify-content: center; width: 100%; }
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn-primary {
+        opacity: 0;
+        transform: translateY(12px);
+        animation: mobileElementEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.60s forwards;
+        will-change: transform, opacity;
+    }
+
+    .btn-secondary,
+    .ts-hero-contact-btn {
+        opacity: 0;
+        transform: translateY(12px);
+        animation: mobileElementEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.72s forwards;
+        will-change: transform, opacity;
+    }
+
+    @keyframes mobileElementEntrance {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .ts-hero-contact-btn {
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        min-height: 48px;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.88rem;
+        font-weight: 700;
+        border-radius: 9999px;
+        box-sizing: border-box;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    /* Touch Micro-Interaction on Tap/Press */
+    .btn-primary:active,
+    .btn-secondary:active,
+    .ts-hero-contact-btn:active {
+        transform: scale(0.97) !important;
+        transition: transform 0.12s ease;
+    }
     
+    /* Services Marquee Mobile */
     .ts-hero-marquee,
-    .hero-bottom-bar { height: 50px; min-height: 50px; padding: 0; }
-    .ts-hero-marquee-item { font-size: 0.72rem; padding: 0.25rem 0.45rem; }
-    .ts-hero-marquee-separator { margin: 0 0.65rem; font-size: 0.55rem; }
+    .hero-bottom-bar {
+        height: clamp(48px, 5.8vh, 54px);
+        min-height: clamp(48px, 5.8vh, 54px);
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        flex-shrink: 0;
+        background: rgba(3, 10, 19, 0.96);
+        border-top: 1px solid rgba(217, 164, 65, 0.28);
+    }
+
+    .ts-hero-marquee-item {
+        font-size: clamp(0.68rem, 2vw, 0.72rem);
+        padding: 0.25rem 0.45rem;
+        letter-spacing: 0.12em;
+    }
+
+    .ts-hero-marquee-separator {
+        margin: 0 0.5rem;
+        font-size: 0.5rem;
+        color: var(--color-gold);
+    }
     
-    .about-section { min-height: auto; max-height: none; padding: 2.5rem 0; }
-    .about-container { padding: 1.5rem 1.25rem; }
-    .about-split-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .about-heading { font-size: 2.1rem; }
+    /* About Section Mobile */
+    .about-section { min-height: auto; max-height: none; padding: 3rem 0; }
+    .about-container { padding: 1.5rem 1.15rem; width: 100%; max-width: 100%; }
+    .about-split-grid { grid-template-columns: 1fr; gap: 1.8rem; width: 100%; }
+    .about-heading { font-size: clamp(1.95rem, 5.8vw, 2.5rem); line-height: 1.15; }
     .compact-highlights-row { flex-direction: column; gap: 0.75rem; }
     .highlight-divider { width: 100%; height: 1px; margin: 0; }
-    .janitorial-preview-box { flex-direction: column; align-items: flex-start; gap: 0.75rem; border-left: none; border-top: 3px solid var(--color-gold); border-radius: 0 0 12px 12px; }
-    .about-explore-link { width: 100%; justify-content: center; }
+    .janitorial-preview-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        border-left: none;
+        border-top: 3px solid var(--color-gold);
+        border-radius: 0 0 12px 12px;
+        padding: 1rem;
+    }
+    .about-explore-link { width: 100%; justify-content: center; min-height: 44px; }
     .about-image-col { order: 5; justify-content: center; width: 100%; padding: 0; }
     .premium-image-frame { max-width: 100%; width: 100%; margin: 6px 0; }
-    .image-inner-wrapper { height: clamp(260px, 50vw, 320px); border-radius: 20px; }
-    .form-row { grid-template-columns: 1fr; }
-
+    .image-inner-wrapper { height: clamp(240px, 50vw, 340px); border-radius: 18px; width: 100%; }
+    
     /* Services Section Mobile */
-    .services-section { padding: 2.8rem 0; }
-    .services-cards-grid { grid-template-columns: 1fr; gap: 0.85rem; }
-    .service-card { padding: 1.2rem; }
+    .services-section { padding: 3rem 0; width: 100%; max-width: 100%; }
+    .services-container { padding: 0 1.15rem; width: 100%; max-width: 100%; }
+    .services-main-heading { font-size: clamp(1.95rem, 5.8vw, 2.5rem); line-height: 1.15; }
+    .services-cards-grid { grid-template-columns: 1fr; gap: 0.95rem; width: 100%; }
+    .service-card {
+        padding: 1.25rem;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .service-card-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.65rem 1rem;
+    }
     
     /* Service Detail Modal Mobile */
-    .service-modal-backdrop { padding: 0.65rem; }
-    .service-modal-dialog { width: calc(100% - 20px); max-height: 92vh; border-radius: 20px; }
-    .service-modal-header { padding: 1.4rem 1.4rem 1.2rem; }
-    .modal-num-watermark { font-size: 65px; right: 1rem; }
-    .modal-service-title { font-size: 1.25rem; }
+    .service-modal-backdrop {
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-modal-dialog {
+        width: calc(100% - 12px);
+        max-width: 540px;
+        max-height: calc(100vh - 20px);
+        max-height: calc(100svh - 20px);
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .service-modal-header {
+        padding: 1.3rem 1.2rem 1.05rem;
+        position: relative;
+        flex-shrink: 0;
+    }
+    .modal-num-watermark {
+        font-size: clamp(48px, 12vw, 68px);
+        top: 0.5rem;
+        right: 0.85rem;
+        transform: none;
+        opacity: 0.12;
+        line-height: 1;
+        pointer-events: none;
+    }
+    .modal-service-title {
+        font-size: clamp(1.2rem, 4.2vw, 1.45rem);
+        line-height: 1.2;
+        word-break: break-word;
+    }
     .modal-icon-badge { width: 44px; height: 44px; }
     .modal-icon-badge svg { width: 22px; height: 22px; }
-    .service-modal-close { top: 1rem; right: 1rem; width: 38px; height: 38px; }
-    .service-modal-body { padding: 22px; gap: 1.4rem; }
+    .service-modal-close {
+        top: 0.85rem;
+        right: 0.85rem;
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        z-index: 10;
+    }
+    .service-modal-body {
+        padding: 1.15rem;
+        gap: 1.25rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        flex: 1 1 auto;
+    }
     .modal-offers-grid, .modal-strengths-grid { grid-template-columns: 1fr; gap: 0.75rem; }
-    .modal-inquire-box { flex-direction: column; align-items: stretch; gap: 0.75rem; text-align: center; }
-    .modal-inquire-btn { justify-content: center; width: 100%; }
-    .service-modal-footer { padding: 0.9rem 1.2rem; }
+    .modal-inquire-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        text-align: center;
+        padding: 1rem;
+    }
+    .modal-inquire-btn {
+        justify-content: center;
+        width: 100%;
+        min-height: 46px;
+        padding: 0.75rem 1.25rem;
+    }
+    .service-modal-footer {
+        padding: 0.85rem 1.15rem;
+        flex-shrink: 0;
+    }
+
+    /* Leadership Section Mobile */
+    .ts-leadership-section { padding: 3.5rem 0; width: 100%; max-width: 100%; }
+    .ts-leadership-container { padding: 0 1.15rem; width: 100%; max-width: 100%; }
+    .ts-ls-title { font-size: clamp(1.95rem, 5.8vw, 2.5rem); line-height: 1.15; }
+    .ts-ls-stage {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        width: 100%;
+        gap: 2rem;
+        margin: 0 auto;
+    }
+    .ts-ls-nexus-wrapper { order: 2; margin: 0.4rem 0; width: 100%; }
+    .ts-ls-leader-1 { order: 1; width: 100%; }
+    .ts-ls-leader-2 { order: 3; width: 100%; }
+    .ts-ls-connector-beam { width: 100%; max-width: 260px; }
+    .ts-ls-portrait-container {
+        height: 330px;
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto 1.25rem;
+    }
+
+    /* Contact Section Mobile */
+    .ts-contact-section { padding: 3.5rem 0 3rem; width: 100%; max-width: 100%; }
+    .ts-contact-container { padding: 0 1.15rem; width: 100%; max-width: 100%; }
+    .ts-contact-title { font-size: clamp(1.95rem, 5.8vw, 2.4rem); line-height: 1.15; }
+    .ts-contact-main-grid { grid-template-columns: 1fr; gap: 1.8rem; width: 100%; }
+    .ts-contact-bottom-features { grid-template-columns: 1fr; gap: 1.4rem; width: 100%; }
+    .ts-contact-form-row { grid-template-columns: 1fr; gap: 0.9rem; }
+    .ts-contact-cta-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        text-align: center;
+    }
+    .ts-contact-cta-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+    }
+    .ts-contact-phones {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+    .ts-contact-link-sep { display: none; }
+    .ts-contact-submit-btn {
+        width: 100%;
+        min-height: 48px;
+        justify-content: center;
+        font-size: 0.92rem;
+    }
+    .ts-contact-item,
+    .ts-contact-form-card {
+        padding: 1.25rem;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .ts-contact-presence-row { justify-content: flex-start; }
+    .ts-contact-presence-track { display: none; }
+
+    /* Footer Mobile */
+    .ts-footer-container { padding: 2.4rem 1.15rem 1.4rem; width: 100%; max-width: 100%; }
+    .ts-footer-main-grid { grid-template-columns: 1fr; gap: 1.8rem; width: 100%; }
+    .ts-footer-bottom-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.2rem;
+    }
+    .ts-footer-bottom-right {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
-/* Small Mobile (320px - 479px) */
-@media (max-width: 479px) {
-    .logo-title { font-size: 1rem; }
-    .logo-subtitle { font-size: 0.50rem; }
-    .hero-heading { font-size: 1.95rem; }
-    .hero-eyebrow-text { font-size: 0.70rem; }
-    .stat-number { font-size: 1.55rem; }
-    .stat-label { font-size: 0.72rem; }
+/* --------------------------------------------------------------------------
+   E. Small Mobile Devices (<= 480px down to 360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .header-container { padding: 0 0.85rem; }
+    .logo-title { font-size: 1.05rem; }
+    .logo-subtitle { font-size: 0.50rem; letter-spacing: 0.16em; }
+    .ts-navbar-toggle,
+    .hamburger-btn { width: 40px; height: 40px; }
+
+    .hero-main-container {
+        padding: clamp(0.35rem, 1.4vh, 0.85rem) clamp(0.95rem, 3.8vw, 1.25rem);
+    }
+    .hero-heading {
+        font-size: clamp(1.85rem, 7.8vw, 2.2rem);
+        margin-bottom: clamp(0.35rem, 1vh, 0.6rem);
+    }
+    .hero-eyebrow-text {
+        font-size: 0.66rem;
+        letter-spacing: 0.12em;
+    }
+    .hero-description {
+        font-size: 0.84rem;
+        line-height: 1.54;
+        margin-bottom: clamp(0.75rem, 1.8vh, 1.15rem);
+    }
+    .btn-primary,
+    .btn-secondary,
+    .ts-hero-contact-btn {
+        min-height: 46px;
+        padding: 0.70rem 1rem;
+        font-size: 0.86rem;
+    }
+    .hero-cta-group {
+        gap: 8px;
+    }
+    .ts-hero-marquee,
+    .hero-bottom-bar {
+        height: 44px;
+        min-height: 44px;
+    }
+    .ts-hero-marquee-item {
+        font-size: 0.68rem;
+    }
     
     .about-heading { font-size: 1.85rem; }
-    .image-inner-wrapper { height: 250px; }
+    .about-container { padding: 1.25rem 0.9rem; }
+    .image-inner-wrapper { height: clamp(220px, 55vw, 270px); }
 
     .services-main-heading { font-size: 1.85rem; }
+    .services-container { padding: 0 0.9rem; }
     .service-card { padding: 1.05rem; }
+    .service-card-title { font-size: 1.15rem; }
 
-    .service-modal-dialog { width: calc(100% - 14px); }
-    .service-modal-header { padding: 1.2rem 1.1rem 1rem; }
-    .service-modal-body { padding: 16px; gap: 1.2rem; }
-    .modal-service-title { font-size: 1.15rem; }
+    .service-modal-dialog {
+        width: calc(100% - 10px);
+        max-height: calc(100svh - 14px);
+        border-radius: 16px;
+    }
+    .service-modal-header { padding: 1.15rem 1rem 0.85rem; }
+    .service-modal-body { padding: 1rem 0.95rem; gap: 1.1rem; }
+    .modal-service-title { font-size: 1.18rem; }
+    .modal-num-watermark { font-size: 46px; opacity: 0.10; right: 0.5rem; }
+
+    .ts-ls-portrait-container {
+        height: 295px;
+        max-width: 280px;
+    }
+    .ts-ls-portrait-card { padding: 1.1rem; border-radius: 20px; }
+    .ts-ls-executive-avatar { width: 130px; height: 155px; }
+    .ts-ls-monogram-badge {
+        bottom: 22px;
+        font-size: 0.92rem;
+        padding: 0.25rem 0.65rem;
+    }
+    .ts-ls-role-pill { bottom: 0.75rem; padding: 0.28rem 0.7rem; }
+    .ts-ls-pill-label { font-size: 0.62rem; }
+    .ts-ls-title { font-size: 1.85rem; }
+    .ts-ls-leader-name { font-size: 1.35rem; }
+
+    .ts-contact-title { font-size: 1.85rem; }
+    .ts-contact-container { padding: 0 0.9rem; }
+    .ts-contact-item,
+    .ts-contact-form-card {
+        padding: 1.1rem;
+        border-radius: 14px;
+    }
+    .ts-contact-icon-box { width: 36px; height: 36px; }
+    .ts-contact-svg { width: 16px; height: 16px; }
+
+    .ts-footer-container { padding: 2rem 0.9rem 1.2rem; }
+    .ts-footer-brand-name { font-size: 1.15rem; }
+}
+
+/* --------------------------------------------------------------------------
+   E2. Compact Phones (<= 375px and 360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 375px) {
+    .hero-main-container {
+        padding: 0.25rem 0.85rem;
+    }
+    .hero-heading {
+        font-size: 1.82rem;
+        line-height: 1.1;
+    }
+    .hero-description {
+        font-size: 0.82rem;
+        line-height: 1.50;
+        margin-bottom: 0.75rem;
+    }
+    .btn-primary,
+    .btn-secondary,
+    .ts-hero-contact-btn {
+        min-height: 44px;
+        padding: 0.62rem 0.9rem;
+        font-size: 0.82rem;
+    }
+    .hero-cta-group {
+        gap: 7px;
+    }
+    .ts-hero-marquee,
+    .hero-bottom-bar {
+        height: 42px;
+        min-height: 42px;
+    }
+    .ts-hero-marquee-item {
+        font-size: 0.65rem;
+        letter-spacing: 0.10em;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   F. Mobile Landscape Optimization (Short Screens)
+   -------------------------------------------------------------------------- */
+@media (max-height: 520px) and (orientation: landscape) {
+    :root {
+        --header-height: 56px;
+    }
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+    .mobile-drawer,
+    .ts-navbar-mobile {
+        max-height: 82vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .service-modal-dialog {
+        max-height: calc(100vh - 16px);
+    }
 }
 
 /* ==========================================================================
@@ -4682,10 +5501,19 @@ ul {
     .hero-bg-image { transform: scale(1.00) !important; animation: none !important; }
     .sun-glow-overlay,
     .atmospheric-overlay,
+    .hero-curve-container,
     .curve-gold-primary,
     .curve-gold-glow,
     .ambient-glow,
+    .hero-particle,
+    .heading-line-gold,
     .about-ambient-glow { animation: none !important; }
+    .hero-eyebrow-wrapper,
+    .hero-heading,
+    .hero-description,
+    .btn-primary,
+    .btn-secondary,
+    .ts-hero-contact-btn { opacity: 1 !important; transform: none !important; }
     .scroll-anim { opacity: 1 !important; transform: none !important; }
     .ts-footer-anim { opacity: 1 !important; transform: none !important; }
 }
@@ -4761,14 +5589,16 @@ ul {
 }
 
 .ts-footer-brand-sub {
+    font-family: var(--font-body);
     font-size: 0.58rem;
     font-weight: 700;
     color: var(--color-gold);
-    letter-spacing: 0.22em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 }
 
 .ts-footer-legal-name {
+    font-family: var(--font-body);
     font-size: 0.68rem;
     font-weight: 700;
     color: #C9A227;
@@ -4779,9 +5609,12 @@ ul {
 }
 
 .ts-footer-tagline {
+    font-family: var(--font-body);
     font-size: 0.82rem;
+    font-weight: 400;
     color: #94A3B8;
-    line-height: 1.45;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
     margin: 0 0 0.85rem 0;
     max-width: 280px;
 }
@@ -4803,8 +5636,9 @@ ul {
 }
 
 .ts-footer-title-text {
-    font-size: 0.82rem;
-    font-weight: 800;
+    font-family: var(--font-body);
+    font-size: 0.80rem;
+    font-weight: 700;
     letter-spacing: 0.14em;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -4829,8 +5663,11 @@ ul {
 
 .ts-footer-link,
 .ts-footer-service-btn {
+    font-family: var(--font-body);
     font-size: 0.83rem;
     font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
     color: #94A3B8;
     text-decoration: none;
     position: relative;
@@ -4841,7 +5678,6 @@ ul {
     padding: 0;
     cursor: pointer;
     text-align: left;
-    font-family: inherit;
 }
 
 .ts-footer-link::after,
@@ -4907,6 +5743,9 @@ ul {
     align-items: center;
     flex-wrap: wrap;
     gap: 0.35rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
 .ts-footer-sep {
@@ -4915,9 +5754,12 @@ ul {
 }
 
 .ts-footer-address {
+    font-family: var(--font-body);
     font-size: 0.80rem;
+    font-weight: 450;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
     color: #94A3B8;
-    line-height: 1.4;
     margin: 0;
 }
 
@@ -4937,10 +5779,12 @@ ul {
 }
 
 .ts-footer-copy-text {
+    font-family: var(--font-body);
     font-size: 0.76rem;
     color: #64748B;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
 }
 
 .ts-footer-bottom-right {
@@ -5015,8 +5859,10 @@ ul {
     background: #07111F;
     border: 1px solid rgba(201, 162, 39, 0.45);
     color: #FCE1A2;
+    font-family: var(--font-body);
     font-size: 0.68rem;
     font-weight: 600;
+    letter-spacing: 0.02em;
     padding: 3px 8px;
     border-radius: 4px;
     pointer-events: none;
