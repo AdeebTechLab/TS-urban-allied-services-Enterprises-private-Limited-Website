@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'JANITORIAL & CLEANING SERVICES',
             tagline: 'CLEAN SPACES SAFE PLACES BETTER PLACES',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
+            images: [
+                { src: 'assets/images/services/janitorial/janitorial-1.jpg', alt: 'Professional commercial office janitorial and cleaning service' },
+                { src: 'assets/images/services/janitorial/janitorial-2.jpg', alt: 'Commercial workspace floor maintenance and sanitization' },
+                { src: 'assets/images/services/janitorial/janitorial-3.jpg', alt: 'Hygienic deep cleaning and environmental sanitization' }
+            ],
             intro: 'Providing professional and reliable cleaning solutions to create clean, safe and healthy environments for every client.',
             servicesTitle: 'OUR SERVICES',
             services: [
@@ -45,6 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'ONLINE TRADING',
             tagline: 'SMART TRADING | BETTER DECISIONS | FINANCIAL FREEDOM',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`,
+            images: [
+                { src: 'assets/images/services/online-trading/trading-1.jpg', alt: 'Real-time financial market analytics and chart monitoring' },
+                { src: 'assets/images/services/online-trading/trading-2.jpg', alt: 'Professional trading terminal and strategic risk management' },
+                { src: 'assets/images/services/online-trading/trading-3.jpg', alt: 'Global exchange trends and quantitative financial planning' }
+            ],
             intro: 'Our online trading services help you trade smarter, manage risks and grow your investments with confidence.',
             servicesTitle: 'OUR SERVICES',
             services: [
@@ -69,6 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'MANPOWER',
             tagline: 'RIGHT PEOPLE | RIGHT SKILLS | RIGHT TIME',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+            images: [
+                { src: 'assets/images/services/manpower/manpower-1.jpg', alt: 'Skilled technical manpower workforce and industrial engineering' },
+                { src: 'assets/images/services/manpower/manpower-2.jpg', alt: 'Industrial operators and certified professional manpower team' },
+                { src: 'assets/images/services/manpower/manpower-3.jpg', alt: 'Specialized workforce team collaboration and operations management' }
+            ],
             intro: 'Reliable manpower solutions to meet your business needs. We provide skilled, semi-skilled and unskilled staff for all types of industries with professionalism and trust.',
             servicesTitle: 'OUR MANPOWER SERVICES',
             services: [
@@ -84,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: 'VERIFIED WORKFORCE', desc: 'Background verified and skilled professionals.' },
                 { title: 'QUALITY ASSURED', desc: 'We ensure quality and timely delivery.' },
                 { title: 'ON TIME SUPPLY', desc: 'Right people at the right time.' },
-                { title: 'CLIENT SATISFACTION', desc: 'Your satisfaction is our priority.' }
+                { title: 'CLIENT SATISATION', desc: 'Your satisfaction is our priority.' }
             ]
         },
 
@@ -94,6 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
             tagline: 'RIGHT PEOPLE | RIGHT OPPORTUNITIES | BETTER FUTURE',
             secondaryTagline: 'BUILDING CAREERS | BUILDING FUTURES',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`,
+            images: [
+                { src: 'assets/images/services/employment/employment-1.jpg', alt: 'Executive talent recruitment and corporate job interview' },
+                { src: 'assets/images/services/employment/employment-2.jpg', alt: 'Professional career counseling and HR talent placement' },
+                { src: 'assets/images/services/employment/employment-3.jpg', alt: 'Corporate talent matching and workforce consulting' }
+            ],
             intro: 'Connecting talent with opportunities. We provide end-to-end employment solutions to help businesses grow and individuals build a better career.',
             servicesTitle: 'OUR EMPLOYMENT SERVICES',
             services: [
@@ -119,6 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'GENERAL ORDER SUPPLIER',
             tagline: 'QUALITY PRODUCTS | RELIABLE SUPPLY | COMPETITIVE PRICING',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
+            images: [
+                { src: 'assets/images/services/general-order-supplier/supplier-1.jpg', alt: 'Comprehensive commercial supply warehouse inventory' },
+                { src: 'assets/images/services/general-order-supplier/supplier-2.jpg', alt: 'Industrial and corporate supplies procurement storage' },
+                { src: 'assets/images/services/general-order-supplier/supplier-3.jpg', alt: 'Organized product packaging and quality order dispatch' }
+            ],
             intro: 'Your trusted partner for all kind of general supplies. We provide a wide range of quality products to meet your business, office, industrial and daily use needs.',
             servicesTitle: 'OUR SUPPLIES INCLUDE',
             services: [
@@ -144,6 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'VISA',
             tagline: 'TRAVEL | STUDY | WORK | SETTLE ABROAD',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/><circle cx="16" cy="14" r="2"/></svg>`,
+            images: [
+                { src: 'assets/images/services/visa/visa-1.jpg', alt: 'International passport and travel visa application documentation' },
+                { src: 'assets/images/services/visa/visa-2.jpg', alt: 'Global travel departure and international airline booking' },
+                { src: 'assets/images/services/visa/visa-3.jpg', alt: 'Immigration consultation and international visa file support' }
+            ],
             intro: 'Your trusted partner for visa and immigration solutions. We help you travel, study, work and settle abroad with confidence.',
             servicesTitle: 'OUR VISA SERVICES',
             services: [
@@ -171,6 +201,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'FREIGHT FORWARDING',
             tagline: 'BY SEA | BY AIR',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 19c2.5 1 5.5 1 8 0s5.5-1 8 0 3.5.7 4 0"/><path d="M3.5 15l1.5-4h14l1.5 4z"/><path d="M6 11V7h3v4"/><path d="M11 11V6h3v5"/><path d="M16 11V8h2v3"/></svg>`,
+            images: [
+                { src: 'assets/images/services/freight-forwarding/freight-1.jpg', alt: 'Global sea freight container ship in international port' },
+                { src: 'assets/images/services/freight-forwarding/freight-2.jpg', alt: 'Fast air freight cargo aircraft loading logistics' },
+                { src: 'assets/images/services/freight-forwarding/freight-3.jpg', alt: 'Modern container terminal and worldwide intermodal freight' }
+            ],
             intro: 'We provide efficient and cost-effective freight forwarding solutions by sea and by air. We handle your cargo with care and deliver it safely to its destination, anywhere in the world.',
             servicesTitle: 'OUR FREIGHT FORWARDING SERVICES',
             services: [
@@ -200,6 +235,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'INTERNATIONAL',
             tagline: 'GLOBAL REACH | SAFE & SECURE | ON TIME, EVERY TIME',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
+            images: [
+                { src: 'assets/images/services/international-deliveries/delivery-1.jpg', alt: 'Express parcel courier delivery van and worldwide logistics' },
+                { src: 'assets/images/services/international-deliveries/delivery-2.jpg', alt: 'Secure package tracking and fast air express delivery' },
+                { src: 'assets/images/services/international-deliveries/delivery-3.jpg', alt: 'Global parcel distribution center and sorting hub' }
+            ],
             intro: 'We deliver more than just parcels. We deliver trust, care and commitment across borders. Fast, reliable and affordable international delivery solutions for your business and personal needs.',
             servicesTitle: 'OUR INTERNATIONAL DELIVERY SERVICES',
             services: [
@@ -234,6 +274,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'CONSTRUCTION',
             tagline: 'BUILD BETTER | PLAN SMART | DELIVER ON TIME',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20"/><path d="M4 18a8 8 0 0 1 16 0"/><path d="M9 10a3 3 0 0 1 6 0v8H9z"/></svg>`,
+            images: [
+                { src: 'assets/images/services/construction/construction-1.jpg', alt: 'Modern commercial high-rise building and structural development' },
+                { src: 'assets/images/services/construction/construction-2.jpg', alt: 'Architectural planning, engineering design, and blueprint review' },
+                { src: 'assets/images/services/construction/construction-3.jpg', alt: 'Civil engineering infrastructure construction site' }
+            ],
             intro: 'We provide reliable and professional construction services for residential, commercial and industrial projects with quality, safety and long-lasting results.',
             servicesTitle: 'OUR CONSTRUCTION SERVICES',
             services: [
@@ -259,6 +304,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'EVENT MANAGEMENT',
             tagline: 'WE PLAN | YOU ENJOY',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="8" cy="14" r="1" fill="currentColor"/><circle cx="12" cy="14" r="1" fill="currentColor"/></svg>`,
+            images: [
+                { src: 'assets/images/services/event-management/event-1.jpg', alt: 'Corporate conference stage lighting and summit setup' },
+                { src: 'assets/images/services/event-management/event-2.jpg', alt: 'Luxury banquet wedding reception and elegant event decor' },
+                { src: 'assets/images/services/event-management/event-3.jpg', alt: 'Grand live stage production and corporate exhibition hall' }
+            ],
             intro: 'From concept to celebration, we create extraordinary events that inspire, engage and leave lasting impressions.',
             servicesTitle: 'OUR EVENT MANAGEMENT SERVICES',
             services: [
@@ -287,6 +337,11 @@ document.addEventListener('DOMContentLoaded', () => {
             tagline: 'JOURNEY BEYOND BOUNDARIES',
             secondaryTagline: 'YOUR JOURNEY | OUR PASSION',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7c-.8-.2-1.6.2-2 .9l-.5.9 5.8 3.6-3 3-2.1-.7c-.5-.2-1.1 0-1.4.5l-.3.5 2.7 1.9 1.9 2.7.5-.3c.5-.3.7-.9.5-1.4l-.7-2.1 3-3 3.6 5.8.9-.5c.7-.4 1.1-1.2.9-2z"/></svg>`,
+            images: [
+                { src: 'assets/images/services/travel-tourism/travel-1.jpg', alt: 'Exotic luxury travel holiday destination and tourism tour' },
+                { src: 'assets/images/services/travel-tourism/travel-2.jpg', alt: 'International airline flight journey and scenic global travel' },
+                { src: 'assets/images/services/travel-tourism/travel-3.jpg', alt: 'World travel exploration, vacation planning, and tour packages' }
+            ],
             intro: 'We make your travel easy, comfortable and unforgettable. From dream vacations to business trips, we provide complete travel solutions under one roof.',
             servicesTitle: 'OUR TRAVEL SERVICES',
             services: [
@@ -314,6 +369,11 @@ document.addEventListener('DOMContentLoaded', () => {
             tagline: 'IMPORT | EXPORT | GENERAL TRADING',
             secondaryTagline: 'BUILDING TRUST, DELIVERING VALUE',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg>`,
+            images: [
+                { src: 'assets/images/services/ts-trading/trading-1.jpg', alt: 'International commodities import and export cargo shipping' },
+                { src: 'assets/images/services/ts-trading/trading-2.jpg', alt: 'Wholesale industrial supplies and consumer goods warehouse' },
+                { src: 'assets/images/services/ts-trading/trading-3.jpg', alt: 'Global trading center and multinational commerce operations' }
+            ],
             intro: 'TS Trading is a dynamic trading company engaged in import, export and supply of high-quality products globally. We are committed to building long-term partnerships through trust, quality and reliability.',
             servicesTitle: 'OUR TRADING SERVICES',
             services: [
@@ -349,21 +409,61 @@ document.addEventListener('DOMContentLoaded', () => {
         'security-services': {
             number: '13',
             title: 'SECURITY SERVICES',
-            tagline: 'PROFESSIONAL SECURITY SERVICES',
+            tagline: 'PROTECTION | VIGILANCE | PEACE OF MIND',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
-            intro: 'Professional Security Services.',
-            isNotice: true,
-            noticeMessage: 'Detailed service information is not provided in the current company profile document.'
+            images: [
+                { src: 'assets/images/services/security-services/security-1.jpg', alt: 'Modern 24/7 security monitoring CCTV operations center' },
+                { src: 'assets/images/services/security-services/security-2.jpg', alt: 'Professional security personnel and facility access protection' },
+                { src: 'assets/images/services/security-services/security-3.jpg', alt: 'High-tech biometric security and surveillance systems' }
+            ],
+            intro: 'We provide professional security support designed to help protect people, property and business environments through disciplined, reliable and responsible security services.',
+            servicesTitle: 'OUR SECURITY SERVICES',
+            services: [
+                { title: 'SECURITY GUARDS', desc: 'Trained security personnel for offices, commercial premises, residential areas and other facilities.' },
+                { title: 'ACCESS CONTROL', desc: 'Support for monitoring and controlling authorized entry and exit.' },
+                { title: 'SITE SECURITY', desc: 'Security coverage designed around the specific requirements of each location.' },
+                { title: 'EVENT SECURITY', desc: 'Security support for corporate events, gatherings and special occasions.' },
+                { title: 'PATROLLING & MONITORING', desc: 'Regular patrol and monitoring support to help maintain a secure environment.' },
+                { title: 'SECURITY SUPPORT STAFF', desc: 'Flexible security staffing solutions according to operational requirements.' }
+            ],
+            featuresTitle: 'WHY CHOOSE US',
+            features: [
+                { title: 'PROFESSIONAL APPROACH', desc: 'Responsible and disciplined personnel.' },
+                { title: 'RELIABLE SUPPORT', desc: 'Security support focused on consistency and dependability.' },
+                { title: 'SITE-FOCUSED', desc: 'Services can be structured according to location and operational needs.' },
+                { title: 'VIGILANCE', desc: 'Continuous attention to security and access concerns.' },
+                { title: 'CLIENT SATISFACTION', desc: 'Professional service with client requirements kept at the center.' }
+            ]
         },
 
         'freelancing-services': {
             number: '14',
             title: 'FREELANCING SERVICES',
-            tagline: 'FREELANCING SERVICES',
+            tagline: 'DIGITAL SKILLS | FLEXIBLE SOLUTIONS | SMARTER WORK',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
-            intro: 'Freelancing Services.',
-            isNotice: true,
-            noticeMessage: 'Detailed service information is not provided in the current company profile document.'
+            images: [
+                { src: 'assets/images/services/freelancing-services/freelancing-1.jpg', alt: 'Modern digital workspace for software development and web design' },
+                { src: 'assets/images/services/freelancing-services/freelancing-2.jpg', alt: 'Remote digital collaboration, design brainstorming, and tech solutions' },
+                { src: 'assets/images/services/freelancing-services/freelancing-3.jpg', alt: 'Creative UI/UX design and freelance digital project development' }
+            ],
+            intro: 'We provide flexible freelancing and digital support solutions that connect businesses with skilled professionals for creative, technical and business-related tasks.',
+            servicesTitle: 'OUR FREELANCING SERVICES',
+            services: [
+                { title: 'WEB DEVELOPMENT', desc: 'Website development and frontend solutions for business needs.' },
+                { title: 'GRAPHIC DESIGN', desc: 'Professional visual designs for digital and business communication.' },
+                { title: 'DIGITAL MARKETING', desc: 'Digital promotion and online marketing support.' },
+                { title: 'CONTENT SERVICES', desc: 'Website, social media and business content support.' },
+                { title: 'DATA & ADMINISTRATIVE SUPPORT', desc: 'Assistance with data entry, documentation and routine digital tasks.' },
+                { title: 'VIRTUAL ASSISTANCE', desc: 'Flexible remote support for day-to-day business activities.' }
+            ],
+            featuresTitle: 'WHY CHOOSE US',
+            features: [
+                { title: 'FLEXIBLE SOLUTIONS', desc: 'Services tailored around specific project requirements.' },
+                { title: 'SKILLED PROFESSIONALS', desc: 'Access to professionals with relevant digital skills.' },
+                { title: 'PROJECT FOCUSED', desc: 'Clear focus on delivering the required task or project.' },
+                { title: 'COST EFFECTIVE', desc: 'Flexible solutions suitable for different business requirements.' },
+                { title: 'TIMELY SUPPORT', desc: 'Organized communication and timely project assistance.' }
+            ]
         }
     };
 
@@ -638,46 +738,232 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================================================
-    // 4. PREMIUM ANIMATED SERVICE DETAIL MODAL CONTROLLER
+    // 4. PREMIUM ANIMATED SERVICE DETAIL MODAL CONTROLLER & 3-IMAGE SLIDER (VIP)
     // =========================================================================
     const serviceModal = document.getElementById('service-modal');
     const modalNumWatermark = document.getElementById('modal-num-watermark');
-    const modalServiceTitle = document.getElementById('modal-service-title');
-    const modalServiceTagline = document.getElementById('modal-service-tagline');
-    const modalIconBadge = document.getElementById('modal-icon-badge');
     const modalServiceBody = document.getElementById('service-modal-body');
     const serviceModalClose = document.getElementById('service-modal-close');
-    const modalFooterExploreMore = document.getElementById('modal-footer-explore-more');
 
     let isModalClosing = false;
     let lastActiveTrigger = null;
+
+    // Active Service Popup Slider State
+    let modalSliderTimer = null;
+    let currentSlideIndex = 0;
+    let modalSlidesCount = 0;
+
+    function stopModalSlider() {
+        if (modalSliderTimer) {
+            clearInterval(modalSliderTimer);
+            modalSliderTimer = null;
+        }
+    }
+
+    function setModalSlide(index) {
+        const sliderTrack = document.getElementById('modal-slider-track');
+        const dotsContainer = document.getElementById('modal-slider-dots');
+        const counterCurrent = document.getElementById('modal-slider-counter-current');
+        if (!sliderTrack) return;
+
+        const slides = sliderTrack.querySelectorAll('.modal-slide');
+        const dots = dotsContainer ? dotsContainer.querySelectorAll('.modal-slider-dot') : [];
+        if (!slides.length) return;
+
+        modalSlidesCount = slides.length;
+        currentSlideIndex = (index + modalSlidesCount) % modalSlidesCount;
+
+        slides.forEach((slide, idx) => {
+            if (idx === currentSlideIndex) {
+                slide.classList.add('active');
+                slide.setAttribute('aria-hidden', 'false');
+            } else {
+                slide.classList.remove('active');
+                slide.setAttribute('aria-hidden', 'true');
+            }
+        });
+
+        dots.forEach((dot, idx) => {
+            if (idx === currentSlideIndex) {
+                dot.classList.add('active');
+                dot.setAttribute('aria-selected', 'true');
+            } else {
+                dot.classList.remove('active');
+                dot.setAttribute('aria-selected', 'false');
+            }
+        });
+
+        if (counterCurrent) {
+            counterCurrent.textContent = String(currentSlideIndex + 1).padStart(2, '0');
+        }
+    }
+
+    function nextModalSlide() {
+        setModalSlide(currentSlideIndex + 1);
+    }
+
+    function prevModalSlide() {
+        setModalSlide(currentSlideIndex - 1);
+    }
+
+    function startModalSlider() {
+        stopModalSlider();
+        if (modalSlidesCount <= 1) return;
+
+        // Respect prefers-reduced-motion
+        const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) return;
+
+        // 4 seconds per image auto-rotation
+        modalSliderTimer = setInterval(() => {
+            nextModalSlide();
+        }, 4000);
+    }
+
+    function initModalSliderEvents() {
+        const sliderWrapper = document.getElementById('modal-service-slider');
+        if (!sliderWrapper) return;
+
+        const prevBtn = sliderWrapper.querySelector('#modal-slider-prev');
+        const nextBtn = sliderWrapper.querySelector('#modal-slider-next');
+        const dots = sliderWrapper.querySelectorAll('.modal-slider-dot');
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                prevModalSlide();
+                startModalSlider();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                nextModalSlide();
+                startModalSlider();
+            });
+        }
+
+        dots.forEach((dot) => {
+            dot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const targetIdx = parseInt(dot.getAttribute('data-slide-target'), 10);
+                if (!isNaN(targetIdx)) {
+                    setModalSlide(targetIdx);
+                    startModalSlider();
+                }
+            });
+        });
+
+        // Pause rotation on hover, resume on mouse leave
+        sliderWrapper.addEventListener('mouseenter', stopModalSlider);
+        sliderWrapper.addEventListener('mouseleave', () => {
+            if (serviceModal && serviceModal.classList.contains('active')) {
+                startModalSlider();
+            }
+        });
+    }
 
     function renderServiceModal(key) {
         const data = serviceData[key];
         if (!data || !modalServiceBody) return;
 
-        // 1. Watermark, Title, Tagline, and Animated Icon
-        if (modalNumWatermark) modalNumWatermark.textContent = data.number || '';
-        if (modalServiceTitle) modalServiceTitle.textContent = data.title || '';
-        if (modalServiceTagline) {
-            modalServiceTagline.textContent = data.tagline || '';
+        // Stop any running timer from previously opened service
+        stopModalSlider();
+        currentSlideIndex = 0;
+
+        // Large Background Watermark Number
+        if (modalNumWatermark) {
+            modalNumWatermark.textContent = data.number || '01';
         }
-        if (modalIconBadge) {
-            modalIconBadge.innerHTML = data.icon || '';
-        }
+
+        const images = data.images && data.images.length > 0 ? data.images : [];
+        modalSlidesCount = images.length;
 
         let html = '';
 
-        // 2. Section 8: Overview / Introduction (Stagger 1)
+        // 1. EDITORIAL SPLIT: Left Framed Slider + Right Title & Overview (Stagger 1)
         html += `
-            <div class="modal-overview-block modal-anim-block anim-1">
-                <span class="modal-section-label">OVERVIEW</span>
-                <p class="modal-overview-text">${data.intro}</p>
-                ${data.secondaryTagline ? `<p class="modal-secondary-tagline">${data.secondaryTagline}</p>` : ''}
+            <div class="modal-hero-split modal-anim-block anim-1">
+                <!-- Left Framed Image Slider -->
+                <div class="modal-slider-frame-wrapper" id="modal-service-slider" role="region" aria-label="${data.title} preview gallery" aria-roledescription="carousel">
+                    <div class="modal-frame-corner frame-tl" aria-hidden="true"></div>
+                    <div class="modal-frame-corner frame-tr" aria-hidden="true"></div>
+                    <div class="modal-frame-corner frame-bl" aria-hidden="true"></div>
+                    <div class="modal-frame-corner frame-br" aria-hidden="true"></div>
+                    <div class="modal-frame-ambient-glow" aria-hidden="true"></div>
+
+                    <div class="modal-slider-track" id="modal-slider-track">
+                        ${images.map((img, idx) => `
+                            <div class="modal-slide ${idx === 0 ? 'active' : ''}" data-slide-index="${idx}" role="group" aria-roledescription="slide" aria-label="Image ${idx + 1} of ${images.length}" aria-hidden="${idx === 0 ? 'false' : 'true'}">
+                                <img src="${img.src}" alt="${img.alt}" class="modal-slide-img" ${idx > 0 ? 'loading="lazy"' : 'loading="eager"'}>
+                                <div class="modal-slide-overlay"></div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <!-- Slide Counter Badge 01 / 03 -->
+                    <div class="modal-slider-counter" aria-live="polite">
+                        <span class="slider-counter-current" id="modal-slider-counter-current">01</span>
+                        <span class="slider-counter-sep">/</span>
+                        <span class="slider-counter-total">${String(images.length).padStart(2, '0')}</span>
+                    </div>
+
+                    <!-- Subtle Navigation Arrows -->
+                    <button class="modal-slider-nav modal-slider-prev" id="modal-slider-prev" aria-label="Previous image" type="button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="modal-slider-nav modal-slider-next" id="modal-slider-next" aria-label="Next image" type="button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <!-- Indicators / Dots -->
+                    <div class="modal-slider-dots" id="modal-slider-dots" role="tablist" aria-label="Slider pagination">
+                        ${images.map((_, idx) => `
+                            <button class="modal-slider-dot ${idx === 0 ? 'active' : ''}" data-slide-target="${idx}" role="tab" aria-selected="${idx === 0 ? 'true' : 'false'}" aria-label="Show image ${idx + 1}" type="button">
+                                <span class="dot-indicator"></span>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Right Editorial Service Info & Overview -->
+                <div class="modal-hero-details">
+                    <div class="modal-hero-badge-row">
+                        <span class="modal-service-category-badge">SERVICE ${data.number || '01'} • TS URBAN</span>
+                        <div class="modal-icon-mini">${data.icon || ''}</div>
+                    </div>
+
+                    <h2 class="modal-service-title" id="modal-service-title">${data.title}</h2>
+                    <div class="modal-title-accent-line"></div>
+
+                    ${data.tagline ? `<div class="modal-service-tagline">${data.tagline}</div>` : ''}
+
+                    <div class="modal-editorial-overview">
+                        <div class="modal-overview-gold-bar"></div>
+                        <div class="modal-overview-content">
+                            <p class="modal-overview-text">${data.intro}</p>
+                            ${data.secondaryTagline ? `<p class="modal-secondary-tagline">${data.secondaryTagline}</p>` : ''}
+                        </div>
+                    </div>
+                </div>
             </div>
         `;
 
-        // 3. Special Case Notice for Services 13 & 14 (No invented claims)
+        // 2. LUXURY GOLD DIVIDER (Stagger 2)
+        html += `
+            <div class="modal-vip-divider modal-anim-block anim-2" aria-hidden="true">
+                <div class="modal-divider-line"></div>
+                <div class="modal-divider-diamond">◆</div>
+                <div class="modal-divider-line"></div>
+            </div>
+        `;
+
+        // 3. NOTICE BOX FOR SERVICES 13 & 14 (No invented claims)
         if (data.isNotice) {
             html += `
                 <div class="modal-notice-box modal-anim-block anim-2">
@@ -694,23 +980,23 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 4. Section 9: What We Offer (2-Column Mini Items, Stagger 2)
+        // 4. WHAT WE OFFER (2-Column Compact Numbered Items, Stagger 2)
         if (data.services && data.services.length > 0) {
             html += `
                 <div class="modal-anim-block anim-2">
                     <div class="modal-section-header">
-                        <h3 class="modal-heading-sub">WHAT WE OFFER</h3>
+                        <span class="modal-section-eyebrow">EXECUTIVE PORTFOLIO</span>
+                        <h3 class="modal-heading-sub">${data.servicesTitle || 'WHAT WE OFFER'}</h3>
                     </div>
                     <div class="modal-offers-grid">
-                        ${data.services.map(item => `
+                        ${data.services.map((item, sIdx) => `
                             <div class="modal-offer-item">
                                 <div class="modal-offer-header">
-                                    <svg class="modal-offer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                    </svg>
+                                    <span class="modal-offer-index">${String(sIdx + 1).padStart(2, '0')}</span>
                                     <span class="modal-offer-title">${item.title}</span>
                                 </div>
                                 <p class="modal-offer-desc">${item.desc}</p>
+                                <div class="modal-offer-hover-line"></div>
                             </div>
                         `).join('')}
                     </div>
@@ -718,11 +1004,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 5. Product Categories (For TS Trading)
+        // 5. PRODUCT CATEGORIES (For TS Trading, Stagger 3)
         if (data.categories && data.categories.length > 0) {
             html += `
                 <div class="modal-anim-block anim-3">
                     <div class="modal-section-header">
+                        <span class="modal-section-eyebrow">COMMERCIAL SECTORS</span>
                         <h3 class="modal-heading-sub">${data.categoriesTitle || 'PRODUCT CATEGORIES'}</h3>
                     </div>
                     <div class="modal-tags-wrapper">
@@ -734,11 +1021,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 6. Commitments (For TS Trading or Construction)
+        // 6. COMMITMENTS (For TS Trading or Construction, Stagger 3)
         if (data.commitments && data.commitments.length > 0) {
             html += `
                 <div class="modal-anim-block anim-3">
                     <div class="modal-section-header">
+                        <span class="modal-section-eyebrow">STANDARDS OF EXCELLENCE</span>
                         <h3 class="modal-heading-sub">${data.commitmentsTitle || 'OUR COMMITMENTS'}</h3>
                     </div>
                     <div class="modal-strengths-grid">
@@ -756,11 +1044,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 7. Section 10: Why Choose Us / Strengths (Stagger 3/4)
+        // 7. WHY CHOOSE US / STRENGTHS (Compact Feature Cards, Stagger 3)
         if (data.features && data.features.length > 0) {
             html += `
                 <div class="modal-anim-block anim-3">
                     <div class="modal-section-header">
+                        <span class="modal-section-eyebrow">COMPETITIVE ADVANTAGE</span>
                         <h3 class="modal-heading-sub">${data.featuresTitle || 'WHY CHOOSE US'}</h3>
                     </div>
                     <div class="modal-strengths-grid">
@@ -778,16 +1067,33 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 8. Service Quote Inquire Banner (Stagger 4)
+        // 8. VIP GOLD CTA SUBMIT QUOTE BOX (Stagger 4)
         html += `
-            <div class="modal-inquire-box modal-anim-block anim-4">
-                <span class="modal-inquire-text">Interested in partnering for <strong>${data.title}</strong>?</span>
-                <button class="modal-inquire-btn" id="modal-btn-inquire" data-service-select="${data.title}">
-                    <span>Request a Quote</span>
-                    <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
-                        <path d="M3.33 8H12.67M12.67 8L8.67 4M12.67 8L8.67 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <div class="modal-vip-cta-box modal-anim-block anim-4">
+                <div class="modal-vip-cta-content">
+                    <span class="modal-vip-cta-eyebrow">DIRECT EXECUTIVE INQUIRY</span>
+                    <h4 class="modal-vip-cta-heading">Request a customized proposal for <strong>${data.title}</strong></h4>
+                    <p class="modal-vip-cta-desc">Connect with our corporate solutions team for tailored operational quotations and consultations.</p>
+                </div>
+                <button class="modal-vip-submit-btn" id="modal-btn-inquire" data-service-select="${data.title}" type="button">
+                    <span class="vip-btn-shine"></span>
+                    <span class="vip-btn-text">SUBMIT QUOTE</span>
+                    <svg class="vip-btn-arrow" viewBox="0 0 18 18" fill="none" width="18" height="18">
+                        <path d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
+            </div>
+
+            <!-- VIP Slim Footer Branding -->
+            <div class="modal-vip-footer-bar modal-anim-block anim-4">
+                <div class="modal-vip-footer-brand">
+                    <span class="vip-footer-name">TS URBAN</span>
+                    <span class="vip-footer-legal">ALLIED SERVICES &amp; ENTERPRISES (PRIVATE) LIMITED</span>
+                </div>
+                <div class="modal-vip-footer-badge">
+                    <span class="vip-verified-dot"></span>
+                    <span>VIP CORPORATE SERVICE PORTFOLIO</span>
+                </div>
             </div>
         `;
 
@@ -795,6 +1101,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Reset scroll position of modal body to top
         modalServiceBody.scrollTop = 0;
+
+        // Initialize slider interactions & start automatic timer
+        initModalSliderEvents();
+        startModalSlider();
 
         // Attach event listener to inner quote button
         const inquireBtn = modalServiceBody.querySelector('#modal-btn-inquire');
@@ -860,6 +1170,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeServiceModal() {
         if (!serviceModal || !serviceModal.classList.contains('active') || isModalClosing) return;
 
+        // Stop slider timer when popup closes
+        stopModalSlider();
+
         isModalClosing = true;
         serviceModal.classList.add('closing');
         serviceModal.classList.remove('active');
@@ -877,6 +1190,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 450);
     }
+
 
     // Event delegation for opening service modal
     document.addEventListener('click', (e) => {
@@ -896,21 +1210,11 @@ document.addEventListener('DOMContentLoaded', () => {
         serviceModal.addEventListener('click', (e) => {
             if (e.target === serviceModal) closeServiceModal();
         });
-    }
 
-    // Footer "Explore More Services" button closes modal and scrolls to services section
-    if (modalFooterExploreMore) {
-        modalFooterExploreMore.addEventListener('click', (e) => {
-            e.preventDefault();
-            closeServiceModal();
-            const servicesSection = document.getElementById('services');
-            if (servicesSection) {
-                const headerHeight = siteHeader ? siteHeader.offsetHeight : 76;
-                const offsetPos = servicesSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                window.scrollTo({
-                    top: offsetPos,
-                    behavior: 'smooth'
-                });
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && serviceModal.classList.contains('active')) {
+                closeServiceModal();
             }
         });
     }
@@ -1206,7 +1510,7 @@ document.addEventListener('DOMContentLoaded', () => {
             spotlights.forEach(spotlight => {
                 const card = spotlight.querySelector('.ts-ls-portrait-card');
                 const aura = spotlight.querySelector('.ts-ls-portrait-aura');
-                const avatar = spotlight.querySelector('.ts-ls-executive-avatar');
+                const portrait = spotlight.querySelector('.ts-ls-portrait-image-wrapper, .ts-ls-executive-avatar');
                 if (!card) return;
 
                 spotlight.addEventListener('mousemove', (e) => {
@@ -1221,15 +1525,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (aura) {
                         aura.style.transform = `translate3d(${x * 24}px, ${y * 24}px, 0) scale(1.15)`;
                     }
-                    if (avatar) {
-                        avatar.style.transform = `translate3d(${x * 12}px, ${y * 10}px, 20px) scale(1.04)`;
+                    if (portrait) {
+                        portrait.style.transform = `translate3d(${x * 10}px, ${y * 8}px, 15px)`;
                     }
                 }, { passive: true });
 
                 spotlight.addEventListener('mouseleave', () => {
                     card.style.transform = '';
                     if (aura) aura.style.transform = '';
-                    if (avatar) avatar.style.transform = '';
+                    if (portrait) portrait.style.transform = '';
                 });
             });
         }
